@@ -1,0 +1,17 @@
+include includes/head.pug
+.form-container
+    h2 Registration
+    form(method='post')
+        .form-group
+            label(for='email') Email
+            input#email.form-control(type='email', name='email', value="", required='')
+        .form-group
+            label(for='password') Password
+            input#password.form-control(type='password', name='password', required='')
+        .form-group
+            label(for='passwordConfirm') Confirm Password
+            input#passwordConfirm.form-control(type='password', name='password', required='')
+        .form-group
+            button.btn.btn-primary(type='submit') Register
+            a.btn.btn-link(href='/login') Cancel
+include includes/footer.pug

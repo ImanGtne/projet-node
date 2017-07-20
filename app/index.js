@@ -27,22 +27,23 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 //const indexCtrl = new IndexCtrl(config);
 
 // Avec une vue
-app.get('/:name?', (req, res) => {
-    const name = req.params.name || 'inconnu';
-
-    //app.get('/:name?', indexCtrl.index.bind(indexCtrl));
-    app.get('/registration', (req, res) => {});
-    app.get('/login', (req, res) => {});
-    app.get('/generator', (req, res) => {});
-    app.get('/download', (req, res) => {});
-    app.post('/postRegistration', (req, res) => {});
-    app.post('/postLogin', (req, res) => {});
-    app.post('/postGenerator', (req, res) => {});
-
-    res.render('index', {
-        name
-    });
-});
+// app.get('/:name?', (req, res) => {
+//     const name = req.params.name || 'inconnu';
+//
+//     //app.get('/:name?', indexCtrl.index.bind(indexCtrl));
+//
+//
+//     res.render('index', {
+//         name
+//     });
+// });
+app.get('/registration', (req, res) => {res.render('registration')});
+app.get('/login', (req, res) => {});
+app.get('/generator', (req, res) => {});
+app.get('/download', (req, res) => {});
+app.post('/postRegistration', (req, res) => {});
+app.post('/postLogin', (req, res) => {});
+app.post('/postGenerator', (req, res) => {});
 //app.post('/auth', indexCtrl.auth.bind(indexCtrl));
 
 
