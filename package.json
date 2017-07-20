@@ -19,6 +19,7 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "html2jade": "^0.8.6",
     "pug": "^2.0.0-rc.2"
   }
 }
