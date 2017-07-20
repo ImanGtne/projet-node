@@ -1,0 +1,22 @@
+{
+  "name": "projet-node",
+  "version": "1.0.0",
+  "description": "\"Projet registration / login and display\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "node app/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImanGtne/projet-node.git"
+  },
+  "author": "IMIE WMD02 <email@domain.tld>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ImanGtne/projet-node/issues"
+  },
+  "homepage": "https://github.com/ImanGtne/projet-node#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
