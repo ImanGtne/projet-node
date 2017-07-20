@@ -8,7 +8,7 @@ const config = {
     name: "Bibi"
 };
 
-const port = 3000;
+const port = 3002;
 const app = express();
 
 app.set('view engine', 'pug');
@@ -26,19 +26,20 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 //const indexCtrl = new IndexCtrl(config);
 
+//app.get('/:name?', indexCtrl.index.bind(indexCtrl));
+app.get('/registration', (req, res) => {});
+app.get('/login', (req, res) => {});
+app.get('/generator', (req, res) => {
+    res.render('generator');
+});
+app.get('/download', (req, res) => {});
+app.post('/postRegistration', (req, res) => {});
+app.post('/postLogin', (req, res) => {});
+app.post('/postGenerator', (req, res) => {});
+
 // Avec une vue
 app.get('/:name?', (req, res) => {
     const name = req.params.name || 'inconnu';
-
-    //app.get('/:name?', indexCtrl.index.bind(indexCtrl));
-    app.get('/registration', (req, res) => {});
-    app.get('/login', (req, res) => {});
-    app.get('/generator', (req, res) => {});
-    app.get('/download', (req, res) => {});
-    app.post('/postRegistration', (req, res) => {});
-    app.post('/postLogin', (req, res) => {});
-    app.post('/postGenerator', (req, res) => {});
-
     res.render('index', {
         name
     });
