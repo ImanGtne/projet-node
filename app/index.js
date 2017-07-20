@@ -45,4 +45,5 @@ app.get('/:name?', (req, res) => {
 });
 //app.post('/auth', indexCtrl.auth.bind(indexCtrl));
 
+
 app.listen(port, () => console.log(`Connection ready on : ${port}`));
