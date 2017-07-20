@@ -30,19 +30,19 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 app.get('/:name?', (req, res) => {
     const name = req.params.name || 'inconnu';
 
-//app.get('/:name?', indexCtrl.index.bind(indexCtrl));
-app.get('/registration', (req, res) => {});
-app.get('/login', (req, res) => {});
-app.get('/generator', (req, res) => {});
-app.get('/download', (req, res) => {});
-app.post('/postRegistration', (req, res) => {});
-app.post('/postLogin', (req, res) => {});
-app.post('/postGenerator', (req, res) => {});
+    //app.get('/:name?', indexCtrl.index.bind(indexCtrl));
+    app.get('/registration', (req, res) => {});
+    app.get('/login', (req, res) => {});
+    app.get('/generator', (req, res) => {});
+    app.get('/download', (req, res) => {});
+    app.post('/postRegistration', (req, res) => {});
+    app.post('/postLogin', (req, res) => {});
+    app.post('/postGenerator', (req, res) => {});
 
-res.render('index', {
-    name
-});
+    res.render('index', {
+        name
+    });
 });
 //app.post('/auth', indexCtrl.auth.bind(indexCtrl));
 
-app.listen(port, () => console.log('Connection ready on : ${port}')); 
+app.listen(port, () => console.log(`Connection ready on : ${port}`));
