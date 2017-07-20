@@ -45,4 +45,4 @@ res.render('index', {
 });
 //app.post('/auth', indexCtrl.auth.bind(indexCtrl));
 
-app.listen(port, () => console.log('Connection ready on : ${port}')); 
+app.listen(port, () => console.log('Connection ready on : ${port}'));
